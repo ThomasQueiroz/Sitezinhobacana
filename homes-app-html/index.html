@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homes App</title>
+    <!--Incluindo estilos css-->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="img/casa.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+
+        <a>
+            <header class="brand-name">
+                <img class="brand-logo" alt="logo" src="img/logo.svg" onclick="Return(1)">
+            </header>
+        </a>
+
+        <section class="content">
+            <form>
+                <input type="text" placeholder="Filtrar por cidade" 
+                id="pesquisa" onkeypress="FiltrarcomEnter(event)">
+                <button type="button" class="primary" onclick="Filtrar()">Filtrar</button>
+                <button type="button" class="primary" onclick="mostrarFavoritos()">Meus favoritos</button>
+                <button type="button" class="primary" onclick="mostrartodososimoveis()">Mostrar todos</button>
+                <input type="checkbox" id="Apartamento" name="Apartamento">
+                <label for="Apartamento">Apartamento</label>
+                <input type="checkbox" id="Casa" name="Casa">
+                <label for="Casa">Casa</label>
+            </form>
+
+            <section class="results" id="lista-imoveis"></section>
+
+        </section>
+
+
+    </main>
+</body>
+<script src="js/imoveis.js"></script>
+<script src="js/index.js"></script>
+</html>
